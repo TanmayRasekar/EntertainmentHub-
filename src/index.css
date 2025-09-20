@@ -34,24 +34,113 @@ button {
 }
 
 /* Responsive breakpoints */
-/* Mobile: 0-576px */
-/* Tablet: 577px-768px */
-/* Desktop: 769px+ */
+/* Small phones: 0-320px */
+/* Phones: 321px-480px */
+/* Large phones/Small tablets: 481px-768px */
+/* Tablets: 769px-1024px */
+/* Desktops: 1025px-1200px */
+/* Large Desktops: 1201px+ */
 
-@media (max-width: 576px) {
+/* Base styles (mobile first) */
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 0.5rem;
+}
+
+.card-container {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Small phones (up to 320px) */
+@media (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+  
+  body {
+    padding: 0.25rem;
+  }
+  
   .card-container {
-    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
+/* Regular phones (321px-480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+  
+  body {
+    padding: 0.5rem;
+  }
+}
+
+/* Large phones/Small tablets (481px-768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    padding: 0.75rem;
+  }
+  
   .card-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
 
-@media (min-width: 769px) {
+/* Tablets (769px-1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+  
+  body {
+    padding: 1rem;
+  }
+  
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Desktops (1025px-1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+  
+  body {
+    padding: 1.5rem;
+  }
+  
   .card-container {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+/* Large Desktops (1201px+) */
+@media (min-width: 1201px) {
+  html {
+    font-size: 18px;
+  }
+  
+  body {
+    padding: 2rem;
+  }
+  
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }

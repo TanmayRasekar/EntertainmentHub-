@@ -16,6 +16,27 @@ const SidebarContainer = styled.aside<{ isOpen: boolean; isDarkMode: boolean }>`
   z-index: 90;
   box-shadow: ${({ isOpen }) => isOpen ? '2px 0 5px rgba(0, 0, 0, 0.1)' : 'none'};
   overflow-y: auto;
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    width: 240px;
+    padding-top: 75px;
+  }
+  
+  @media (max-width: 768px) {
+    width: 220px;
+    padding-top: 70px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 200px;
+    padding-top: 65px;
+  }
+  
+  @media (max-width: 320px) {
+    width: 180px;
+    padding-top: 60px;
+  }
 `;
 
 const SidebarOverlay = styled.div<{ isOpen: boolean }>`

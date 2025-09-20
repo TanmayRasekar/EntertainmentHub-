@@ -26,9 +26,20 @@ const MainContent = styled.main<{ sidebarOpen: boolean }>`
   margin-left: ${({ sidebarOpen }) => sidebarOpen ? '250px' : '0'};
   transition: margin-left 0.3s ease;
   
-  @media (max-width: 768px) {
+  /* Tablets and below */
+  @media (max-width: 1024px) {
     margin-left: 0;
+    padding: 15px;
+  }
+  
+  /* Mobile phones */
+  @media (max-width: 480px) {
     padding: 10px;
+  }
+  
+  /* Small phones */
+  @media (max-width: 320px) {
+    padding: 5px;
   }
 `;
 

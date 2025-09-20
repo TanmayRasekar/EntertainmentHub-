@@ -15,7 +15,27 @@ const Card = styled.div<{ isDarkMode: boolean }>`
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    border-radius: 6px;
+  }
+  
+  @media (max-width: 768px) {
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    border-radius: 4px;
+    &:hover {
+      transform: none; /* Disable hover effect on mobile */
+      box-shadow: var(--card-shadow);
+    }
+  }
 `;
+
 
 const ImageContainer = styled.div`
   width: 100%;
@@ -45,12 +65,44 @@ const CardContent = styled.div<{ isDarkMode: boolean }>`
   flex-direction: column;
   background-color: ${({ isDarkMode }) => isDarkMode ? '#2a2a2a' : '#ffffff'};
   color: ${({ isDarkMode }) => isDarkMode ? '#ffffff' : '#333333'};
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    padding: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.7rem;
+  }
+  
+  @media (max-width: 320px) {
+    padding: 0.6rem;
+  }
 `;
 
 const Title = styled.h3`
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
 `;
 
 const Description = styled.p`
@@ -58,6 +110,27 @@ const Description = styled.p`
   opacity: 0.8;
   margin-bottom: 1rem;
   flex-grow: 1;
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    font-size: 0.85rem;
+    margin-bottom: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    margin-bottom: 0.7rem;
+    -webkit-line-clamp: 2;
+  }
 `;
 
 const Rating = styled.div`

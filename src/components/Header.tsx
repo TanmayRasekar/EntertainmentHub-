@@ -15,12 +15,47 @@ const HeaderContainer = styled.header<{ isDarkMode: boolean }>`
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    padding: 0.9rem 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.7rem 1rem;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 320px) {
+    padding: 0.6rem 0.8rem;
+  }
 `;
 
 const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary-color);
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    font-size: 1.4rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const Nav = styled.nav`
@@ -28,8 +63,26 @@ const Nav = styled.nav`
   align-items: center;
   gap: 1.5rem;
   
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    gap: 1.2rem;
+  }
+  
   @media (max-width: 768px) {
     gap: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    order: 3;
+  }
+  
+  @media (max-width: 320px) {
+    gap: 0.5rem;
   }
 `;
 
@@ -42,12 +95,51 @@ const NavLink = styled(Link)<{ isDarkMode: boolean }>`
   &:hover {
     background-color: ${({ isDarkMode }) => isDarkMode ? '#333333' : '#f0f0f0'};
   }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 0.8rem;
+    padding: 0.25rem;
+  }
 `;
 
 const Controls = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    gap: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    gap: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.7rem;
+    margin-left: auto;
+  }
+  
+  @media (max-width: 320px) {
+    gap: 0.6rem;
+  }
 `;
 
 const Button = styled.button<{ isDarkMode: boolean }>`

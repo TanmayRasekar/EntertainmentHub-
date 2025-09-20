@@ -8,6 +8,23 @@ const FooterContainer = styled.footer<{ isDarkMode: boolean }>`
   padding: 2rem;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    padding: 1.8rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.2rem;
+  }
+  
+  @media (max-width: 320px) {
+    padding: 1rem;
+  }
 `;
 
 const FooterContent = styled.div`
@@ -17,9 +34,23 @@ const FooterContent = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    gap: 1.8rem;
+  }
+  
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  @media (max-width: 320px) {
+    gap: 1rem;
   }
 `;
 
@@ -32,6 +63,27 @@ const SectionTitle = styled.h3`
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: var(--primary-color);
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    font-size: 1.15rem;
+    margin-bottom: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
 `;
 
 const LinksList = styled.ul`
@@ -41,6 +93,15 @@ const LinksList = styled.ul`
 
 const LinkItem = styled.li`
   margin-bottom: 0.5rem;
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    margin-bottom: 0.4rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 0.3rem;
+  }
 `;
 
 const FooterLink = styled(Link)<{ isDarkMode: boolean }>`
